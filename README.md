@@ -1,6 +1,4 @@
-## About this project
-
-`Projeto Básico de Login
+Sobre este Projeto
 Este é um projeto básico de login desenvolvido em Laravel 10 com PHP 8.1. Ele serve como base para a implementação de novos projetos, oferecendo um sistema de autenticação pronto para uso.
 
 Requisitos
@@ -101,3 +99,50 @@ Abra um Pull Request.
 Licença
 Este projeto está licenciado sob a MIT License.
 
+Adicionando Scaffolding de Autenticação
+Instale o Pacote laravel/ui
+Execute o seguinte comando no terminal para instalar o pacote:
+
+bash
+Copiar código
+composer require laravel/ui
+Gerar a Scaffolding de Autenticação
+Após a instalação do pacote, você pode gerar a scaffolding de autenticação com o seguinte comando:
+
+bash
+Copiar código
+php artisan ui vue --auth
+Esse comando vai gerar as rotas, controladores e views necessários para o login, registro, redefinição de senha e outras funcionalidades de autenticação.
+
+Compile os Assets
+Para que os arquivos de front-end gerados pelo laravel/ui funcionem corretamente, você precisa compilar os assets usando o npm. Execute os seguintes comandos:
+
+bash
+Copiar código
+npm install
+npm run dev
+Ou, se você estiver em um ambiente de produção, use:
+
+bash
+Copiar código
+npm run prod
+Verifique suas Rotas
+Após executar os comandos acima, suas rotas de autenticação estarão definidas. O arquivo routes/web.php deve conter algo assim:
+
+php
+Copiar código
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Teste a Autenticação
+Agora você pode acessar as rotas de autenticação, como /login, /register, /password/reset, etc. A rota /home será protegida por autenticação e redirecionará o usuário para a página de login se ele não estiver autenticado.
+
+Resumo
+Ao instalar o pacote laravel/ui  e gerar a scaffolding de autenticação, você resolverá o erro e terá um sistema de autenticação básico funcionando em seu projeto Laravel. Lembre-se de compilar os assets usando npm para que tudo funcione corretamente.
