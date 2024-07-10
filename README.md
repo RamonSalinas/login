@@ -34,11 +34,11 @@ npx husky install
 5. Migre e Popule o Banco de Dados
 Execute as migrações e os seeders para configurar o banco de dados:
 
-bash
-Copiar código
-php artisan migrate --seed
-6. Instale o Bootstrap
-Instale o Bootstrap via npm:
+
+cambie env.exemple.test para .env  e ajuste nome do banco de dados . 
+
+
+
 
 bash
 Copiar código
@@ -68,6 +68,12 @@ DB_USERNAME=seu_usuario
 DB_PASSWORD=sua_senha
 Configuração do XSECURE
 Se o projeto utiliza um token de segurança personalizado, configure o XSECURITY_SECRET no arquivo .env:
+
+bash
+Copiar código
+php artisan migrate --seed
+6. Instale o Bootstrap
+Instale o Bootstrap via npm:
 
 makefile
 Copiar código
