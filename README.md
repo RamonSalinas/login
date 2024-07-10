@@ -1,18 +1,24 @@
-Sobre este Projeto
+# Sobre este Projeto
+
 Este é um projeto básico de login desenvolvido em Laravel 10 com PHP 8.1. Ele serve como base para a implementação de novos projetos, oferecendo um sistema de autenticação pronto para uso.
 
-Requisitos
-PHP 8.1 ou superior
-Composer
-Node.js e npm
-Passos para Instalar o Projeto
-1. Clone o Projeto
+## Requisitos
+
+- PHP 8.1 ou superior
+- Composer
+- Node.js e npm
+
+## Passos para Instalar o Projeto
+
+### 1. Clone o Projeto
+
 Clone o repositório para sua máquina local usando o comando abaixo:
 
-bash
-Copiar código
+```bash
 git clone https://github.com/seu-usuario/seu-projeto.git
 cd seu-projeto
+
+
 2. Instale as Dependências do Composer
 Use o Composer para instalar as dependências do Laravel:
 
